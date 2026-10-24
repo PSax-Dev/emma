@@ -588,6 +588,37 @@
   /* SCROLL PARALLAX — applied via JS, each box drifts at its own speed/direction */
   .parallax-el{will-change:transform;transition:transform .35s cubic-bezier(.22,.9,.34,1);}
   .ai-card:hover{transform:translateY(-2px) !important;}
+
+  /* Responsive full bundle showcase */
+  #bonuses .full-bundle {
+    width: 100%;
+    max-width: 680px;
+    margin: 36px auto 0;
+    padding: 12px;
+    border: 1px solid rgba(240, 192, 32, 0.25);
+    border-radius: 16px;
+    background: #161616;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  #bonuses .full-bundle-image {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #bonuses .full-bundle-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  @media (max-width: 720px) {
+    #bonuses .full-bundle { margin-top: 24px; padding: 6px; border-radius: 12px; }
+    #bonuses .full-bundle-image img { border-radius: 8px; }
+  }
 </style>
 </head>
 <body>
@@ -740,7 +771,7 @@
         <div class="result-card">
           <span class="tag">Mine</span>
           <div class="shot img-placeholder">
-            <img src="myresults1.png" alt="One of Illo's YouTube channels, started 2 months ago">
+            <img src="myresults2.png" alt="One of Illo's YouTube channels, started 2 months ago">
           </div>
           <div class="cap">This is one of my YouTube channels I started just 2 months ago</div>
         </div>
@@ -756,7 +787,7 @@
         <div class="result-card">
           <span class="tag">Mine</span>
           <div class="shot img-placeholder">
-            <img src="myresults2.png" alt="Another of Illo's YouTube channels, one month old">
+            <img src="myresults1.png" alt="Another of Illo's YouTube channels, one month old">
           </div>
           <div class="cap">This is another of my channels but this one is just a month old</div>
         </div>
@@ -1079,8 +1110,10 @@
     </div>
  
     <!-- FULL BUNDLE IMAGE -->
-    <div class="img-placeholder" style="border-style:solid;">
-      <img src="money-magnet-mockup.png" alt="Full bundle: Main guide + Income Optimizer + Efficient Scale Metrics" style="max-width:420px;">
+    <div class="full-bundle">
+      <div class="full-bundle-image">
+        <img src="money-magnet.png" alt="Full bundle: Main guide + Income Optimizer + Efficient Scale Metrics" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
